@@ -8,6 +8,8 @@ import {
   Dashboard as DashboardView,
   ProductList as ProductListView,
   TarefaList as TarefaListView,
+  UserList as UserListView,
+  ClienteList as ClienteListView,
   Typography as TypographyView,
   Icons as IconsView,
   Account as AccountView,
@@ -31,6 +33,12 @@ const Routes = () => {
         layout={MainLayout}
         path="/dashboard"
       />
+        {/* <RouteWithLayout
+        component={UserListView}
+        exact
+        layout={MainLayout}
+        path="/users"
+      /> */}
       <RouteWithLayout
         component={TarefaListView}
         exact
@@ -38,6 +46,20 @@ const Routes = () => {
         path="/tarefas"
       />
     
+     /* <RouteWithLayout
+        component={ProductListView}
+        exact
+        layout={MinimalLayout}
+        path="/produtos"
+      /> */
+
+      />
+        <RouteWithLayout
+        component={ClienteListView}
+        exact
+        layout={MainLayout}
+        path="/clientes"
+      />
       {/* <RouteWithLayout
         component={SignUpView}
         exact

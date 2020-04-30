@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-
+// import LockOpenIcon from '@material-ui/icons/LockOpen';
+import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import GroupIcon from '@material-ui/icons/Group';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 
 import { Profile, SidebarNav, } from './components';
+import { ProductCard } from 'views/ProductList/components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {
@@ -44,20 +48,30 @@ const Sidebar = props => {
       href: '/dashboard',
       icon: <DashboardIcon />
     },
+    // {
+            {
+              title: 'Clientes',
+              href: '/clientes',
+              icon: <PeopleOutlineIcon/>
+            },
+    //   title: 'Usuários',
+    //   href: '/users',
+    //   icon: <GroupIcon />
+    // },
+    {
+      title: 'Produtos',
+      href: '/produtos',
+      icon: <LocalGroceryStoreIcon />
+    },
     {
       title: 'Tarefas',
       href: '/tarefas',
       icon: <FormatListBulletedIcon />
     },
-    {
-      title: 'Login',
-      href: '/login',
-      icon: <LockOpenIcon/>
-    }
     // {
-    //   title: 'Products',
-    //   href: '/products',
-    //   icon: <ShoppingBasketIcon />
+      //   title: 'Login',
+    //   href: '/login',
+    //   icon: <LockOpenIcon/>
     // },
     // {
     //   title: 'Authentication',
@@ -65,15 +79,11 @@ const Sidebar = props => {
     //   icon: <LockOpenIcon />
     // },
     // {
-    //   title: 'Typography',
-    //   href: '/typography',
-    //   icon: <TextFieldsIcon />
-    // },
-    // {
     //   title: 'Icons',
     //   href: '/icons',
     //   icon: <ImageIcon />
     // },
+
     // {
     //   title: 'Account',
     //   href: '/account',
@@ -104,7 +114,7 @@ const Sidebar = props => {
           className={classes.nav}
           pages={pages}
         />
-       
+
       </div>
     </Drawer>
   );
